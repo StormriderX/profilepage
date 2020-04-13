@@ -32,6 +32,14 @@ body {
 
 .content-divider {
   height: 3vh;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--hoverBackground)),
+    color-stop(#096386),
+    to(var(--mainDark))
+  );
   background: linear-gradient(
     to right,
     var(--hoverBackground),
@@ -41,10 +49,12 @@ body {
 }
 
 i {
+  -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
 }
 
 .follow-me i {
+  -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
 
@@ -59,6 +69,7 @@ i {
   height: auto;
   position: fixed;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -72,6 +83,7 @@ i {
   color: #003d99;
   opacity: 0.6;
   background: white;
+  -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -80,6 +92,7 @@ i {
   color: rgb(14, 17, 17);
   opacity: 0.7;
   background: white;
+  -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -88,6 +101,7 @@ i {
   color: #0f67eb;
   background: white;
   opacity: 0.6;
+  -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -97,11 +111,16 @@ i {
   position: relative;
   height: 100vh;
   width: 100vw;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.6)),
+      to(rgba(0, 0, 0, 0.6))
+    ),
+    url(./Images/background.jpeg) no-repeat center center fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(./Images/background.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -111,6 +130,9 @@ i {
   right: 0;
   list-style: none;
   display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  -webkit-box-pack: end;
   justify-content: flex-end;
   z-index: 100;
 }
@@ -128,6 +150,7 @@ i {
   font-weight: 700;
   text-shadow: -2px -2px 14px var(--mainText);
   border-radius: 0.5rem;
+  -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -145,6 +168,7 @@ i {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -175,6 +199,7 @@ i {
   padding: 0.5rem 1.5rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 7px 3px #096386;
+  -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -193,11 +218,16 @@ i {
 .skills-education__section {
   height: 100vh;
   width: 100vw;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(rgba(0, 0, 0, 0.8))
+    ),
+    url(./Images/skills&education-bg.jpg) no-repeat center center fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(./Images/skills&education-bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -221,6 +251,9 @@ i {
 .main-skills__wrapper {
   text-align: center;
   display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
 }
 
@@ -228,10 +261,12 @@ i {
   width: 100%;
   height: auto;
   text-align: center;
+  -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
 .single-skill__wrapper i:hover {
+  -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
 
@@ -290,6 +325,9 @@ i {
   text-align: center;
   width: 100%;
   display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
 }
 
@@ -315,7 +353,12 @@ i {
 .about-me__wrapper {
   height: 100%;
   display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -414,6 +457,9 @@ i {
 .aditional-icons {
   width: 50%;
   display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
   margin: 0 auto;
 }
@@ -441,6 +487,7 @@ i {
   /* Header styling */
 
   .navbar-items {
+    -webkit-box-pack: space-evenly;
     justify-content: space-evenly;
     position: fixed;
     top: 0;
@@ -520,6 +567,8 @@ i {
   .education__wrapper {
     font-size: 1.8rem;
     height: calc(100% - 100px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
     justify-content: space-around;
   }
