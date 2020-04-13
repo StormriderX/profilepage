@@ -24,14 +24,14 @@ const toggleContactSection = () => {
   contactSectionEl.classList.toggle('contact-section__visible');
 };
 
-const hidePageContent = () => {
+const hideContent = () => {
   hidePageEl.classList.toggle('page-wrapper__visible');
 };
 
 const backdropAndContactHandler = () => {
   toggleBackdrop();
   toggleContactSection();
-  hidePageContent();
+  hideContent();
   clearUserInput();
 };
 
