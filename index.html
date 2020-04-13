@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Header Section -->
-
+    <div class="backdrop"></div>
     <header class="main-header">
       <nav>
         <ul class="navbar-items">
@@ -27,7 +27,9 @@
             <a href="#skills&education">Skills & Education</a>
           </li>
           <li class="navbar-item"><a href="#about-me">About Me</a></li>
-          <li class="navbar-item"><a href="#contact">Contact</a></li>
+          <li class="navbar-item" id="contact-btn">
+            <a href="#contact">Let's talk</a>
+          </li>
         </ul>
       </nav>
       <div class="header-content__wrapper">
@@ -40,7 +42,8 @@
         <a
           href="https://drive.google.com/file/d/1zt9yB_E79U2xfmBKE4wNTxY-bbbEwzsg/view?usp=sharing"
           class="header-content__btn"
-          >View<span class="highlighted"> Cv</span></a
+          target="_blank"
+          >View<span class="highlighted"> CV</span></a
         >
       </div>
       <div class="follow-me">
@@ -74,94 +77,121 @@
           </li>
         </ul>
       </div>
+      <a href="#" class="arrow"></a>
     </header>
     <!-- End of header -->
 
     <div class="content-divider"></div>
 
     <!-- Skills&education -->
-    <section class="skills-education__section" id="skills&education">
-      <article class="skills-article">
-        <p class="skills-title">My <span class="highlighted">skills</span></p>
-        <div class="main-skills__wrapper">
-          <div class="single-skill__wrapper">
-            <i class="fab fa-html5 fa-4x html-skill"></i>
-            <p class="skill-title">Html</p>
+    <div class="page__wrapper">
+      <section class="skills-education__section" id="skills&education">
+        <article class="skills-article">
+          <p class="skills-title">My <span class="highlighted">skills</span></p>
+          <div class="main-skills__wrapper">
+            <div class="single-skill__wrapper">
+              <i class="fab fa-html5 fa-4x html-skill"></i>
+              <p class="skill-title">Html</p>
+            </div>
+            <div class="single-skill__wrapper">
+              <i class="fab fa-css3-alt fa-4x css-skill"></i>
+              <p class="skill-title">Css</p>
+            </div>
+            <div class="single-skill__wrapper">
+              <i class="fab fa-sass fa-4x sass-skill"></i>
+              <p class="skill-title">Sass</p>
+            </div>
+            <div class="single-skill__wrapper">
+              <i class="fab fa-js-square fa-4x js-skill"></i>
+              <p class="skill-title">Javascript</p>
+            </div>
           </div>
-          <div class="single-skill__wrapper">
-            <i class="fab fa-css3-alt fa-4x css-skill"></i>
-            <p class="skill-title">Css</p>
+        </article>
+
+        <article class="education__article">
+          <p class="education-title">
+            <span class="highlighted">Education</span>
+          </p>
+          <div class="education__wrapper">
+            <div class="high-school__wrapper">
+              <p class="high-school__faculty">HighSchool</p>
+              <p class="high-school-name">
+                Colegiul National
+                <span class="highlighted">"Vlaicu Voda"</span> Curtea de Arges
+              </p>
+              <p class="high-school-profile">
+                Profil <span class="highlighted">Mate-Info</span>
+              </p>
+              <p class="high-school-year">2011 - 2015</p>
+            </div>
+            <div class="faculty__wrapper">
+              <p class="high-school__faculty">Faculty</p>
+              <p class="faculty-name">
+                Universitatea
+                <span class="highlighted">Spiru Haret </span>Bucuresti
+              </p>
+              <p class="faculty-profile">
+                Facultatea de <span class="highlighted">Informatica</span>
+              </p>
+              <p class="faculty-year">2018 - 2021</p>
+            </div>
           </div>
-          <div class="single-skill__wrapper">
-            <i class="fab fa-sass fa-4x sass-skill"></i>
-            <p class="skill-title">Sass</p>
+        </article>
+      </section>
+      <div class="content-divider"></div>
+      <!-- End of skills-education -->
+
+      <!-- About -->
+      <section class="about" id="about-me">
+        <p class="skills-title">About <span class="highlighted">Me</span></p>
+        <div class="about-me__wrapper">
+          <img
+            src="./Images/profile_pic.jpg"
+            alt="About me"
+            class="about-img"
+          />
+          <p class="about-me__text">
+            After finishing highschool I had no ideea what my passions are, I
+            have tried to find them, and the best way for this is through trial
+            and error. I have tried to become an electrical engineer and after
+            that a medic, but neither of those did work for me, something was
+            always missing. Now I discovered that my real passions are, web
+            development & programming. I have put myself through school and
+            started learning
+          </p>
+          <p class="about-me__text">
+            <strong
+              >I am a self motivated person willing to do as much as possible to
+              further improve myself. I love working both individually and in a
+              team, the latter offers me much more possibilities to expand my
+              knowledge. I am eager to start my journey as a web developer in a
+              professional way</strong
+            >
+          </p>
+        </div>
+      </section>
+
+      <footer class="aditional-info">
+        <div class="aditional-icons">
+          <div class="icon__wrapper">
+            <i class="fas fa-hotel fa-3x icons" aria-hidden="true"></i>
+            <p class="icon-text">Location</p>
+            <p class="icon-text">Str. Salcamilor Bucuresti</p>
           </div>
-          <div class="single-skill__wrapper">
-            <i class="fab fa-js-square fa-4x js-skill"></i>
-            <p class="skill-title">Javascript</p>
+          <div class="icon__wrapper">
+            <i class="fas fa-phone fa-3x icons" aria-hidden="true"></i>
+            <p class="icon-text">Phone</p>
+            <p class="icon-text">0749534283</p>
+          </div>
+          <div class="icon__wrapper">
+            <i class="fas fa-envelope fa-3x icons" aria-hidden="true"></i>
+            <p class="icon-text">Email</p>
+            <p class="icon-text">leucioiu.stefan@yahoo.com</p>
           </div>
         </div>
-      </article>
-
-      <article class="education__article">
-        <p class="education-title">
-          <span class="highlighted">Education</span>
-        </p>
-        <div class="education__wrapper">
-          <div class="high-school__wrapper">
-            <p class="high-school__faculty">HighSchool</p>
-            <p class="high-school-name">
-              Colegiul National
-              <span class="highlighted">"Vlaicu Voda"</span> Curtea de Arges
-            </p>
-            <p class="high-school-profile">
-              Profil <span class="highlighted">Mate-Info</span>
-            </p>
-            <p class="high-school-year">2011 - 2015</p>
-          </div>
-          <div class="faculty__wrapper">
-            <p class="high-school__faculty">Faculty</p>
-            <p class="faculty-name">
-              Universitatea
-              <span class="highlighted">Spiru Haret </span>Bucuresti
-            </p>
-            <p class="faculty-profile">
-              Facultatea de <span class="highlighted">Informatica</span>
-            </p>
-            <p class="faculty-year">2018 - 2021</p>
-          </div>
-        </div>
-      </article>
-    </section>
-    <div class="content-divider"></div>
-    <!-- End of skills-education -->
-
-    <!-- About -->
-    <section class="about" id="about-me">
-      <p class="skills-title">About <span class="highlighted">Me</span></p>
-      <div class="about-me__wrapper">
-        <img src="./Images/profile_pic.jpg" alt="About me" class="about-img" />
-        <p class="about-me__text">
-          After finishing highschool I had no ideea what my passions are, I have
-          tried to find them, and the best way for this is through trial and
-          error. I have tried to become an electrical engineer and after that a
-          medic, but neither of those did work for me, something was always
-          missing. Now I discovered that my real passions are, web development &
-          programming. I have put myself through school and started learning
-        </p>
-        <p class="about-me__text">
-          <strong
-            >I am a self motivated person willing to do as much as possible to
-            further improve myself. I love working both individually and in a
-            team, the latter offers me much more possibilities to expand my
-            knowledge. I am eager to start my journey as a web developer in a
-            professional way</strong
-          >
-        </p>
-      </div>
-    </section>
-    <div class="content-divider"></div>
-
+      </footer>
+      <div class="content-divider"></div>
+    </div>
     <section class="contact-me__section" id="contact">
       <p class="contact-title">Contact <span class="highlighted">Me</span></p>
       <form action="POST" data-netlify="true" class="contact-form">
@@ -172,8 +202,8 @@
             name="name"
             class="form-input"
             id="input-name"
-            required
             oninput="checkInput()"
+            required
           />
         </div>
         <div class="input">
@@ -183,8 +213,8 @@
             name="email"
             class="form-input"
             id="input-mail"
-            required
             oninput="checkInput()"
+            required
           />
         </div>
         <div class="input">
@@ -199,29 +229,13 @@
             required
           ></textarea>
         </div>
-        <button type="submit" class="submit-button" disabled>
-          Submit
-        </button>
+        <div class="btn__wrapper">
+          <button type="submit" class="submit-button" disabled>
+            Submit
+          </button>
+          <button type="button" class="cancel-button">Cancel</button>
+        </div>
       </form>
     </section>
-    <footer class="aditional-info">
-      <div class="aditional-icons">
-        <div class="icon__wrapper">
-          <i class="fas fa-hotel fa-3x icons" aria-hidden="true"></i>
-          <p class="icon-text">Location</p>
-          <p class="icon-text">Str. Salcamilor Bucuresti</p>
-        </div>
-        <div class="icon__wrapper">
-          <i class="fas fa-phone fa-3x icons" aria-hidden="true"></i>
-          <p class="icon-text">Phone</p>
-          <p class="icon-text">0749534283</p>
-        </div>
-        <div class="icon__wrapper">
-          <i class="fas fa-envelope fa-3x icons" aria-hidden="true"></i>
-          <p class="icon-text">Email</p>
-          <p class="icon-text">leucioiu.stefan@yahoo.com</p>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

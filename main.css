@@ -25,9 +25,40 @@ body {
   font-family: var(--mainFont);
 }
 /* Global styles */
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 200;
+  display: none;
+}
+
+.backdrop__visible {
+  display: block;
+}
+
 .highlighted {
   color: var(--mainText);
   text-shadow: -2px -2px 14px var(--mainText);
+}
+
+.arrow {
+  width: 35px;
+  height: 35px;
+  border-top: 5px solid var(--hoverBackground);
+  border-right: 5px solid var(--hoverBackground);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transition: var(--mainTransition);
+}
+
+.arrow:hover {
+  transform: scale(1.5) rotate(45deg);
 }
 
 .content-divider {
@@ -207,7 +238,7 @@ i {
 .header-content__btn:active,
 .header-content__btn:focus {
   opacity: 0.5;
-  outline: 0;
+  outline: none;
   border-radius: 1rem;
 }
 
@@ -379,8 +410,21 @@ i {
 }
 
 .contact-me__section {
-  height: 80vh;
+  height: 60vh;
+  width: 50vw;
   background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 14px;
+  z-index: 300;
+  display: none;
+  animation: fade 0.7s ease-out forwards;
+}
+
+.contact-section__visible {
+  display: block;
 }
 
 .contact-title {
@@ -388,7 +432,6 @@ i {
   top: 0;
   left: 5%;
   padding-top: 2rem;
-  margin-bottom: 5rem;
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -415,37 +458,59 @@ i {
 }
 
 #input-name {
-  width: 80%;
+  width: 100%;
   height: 4vh;
 }
 
 #input-mail {
-  width: 80%;
+  width: 100%;
   height: 4vh;
 }
 
 #input-message {
-  width: 80%;
+  width: 100%;
+  height: 10vh;
+}
+
+.btn__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .submit-button {
-  display: inline-block;
   padding: 0.5rem 2rem;
   color: white;
   font-size: 1.2rem;
   border: none;
   margin-top: 1rem;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  margin-right: 0.5rem;
   background: var(--mainDark);
   cursor: pointer;
+  border-radius: 14px;
+}
+
+.cancel-button {
+  padding: 0.5rem 2rem;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  margin-top: 1rem;
+  background: var(--mainDark);
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+.submit-button:focus,
+.cancel-button:focus {
+  outline: none;
 }
 
 .aditional-info {
   width: 100vw;
   height: 20vh;
-  background: var(--mainDark);
+  background: rgb(44, 44, 44);
   text-align: center;
 }
 
@@ -740,5 +805,18 @@ i {
 
   .education__wrapper p {
     font-size: 1.6rem;
+  }
+}
+
+.page-wrapper__visible {
+  display: none;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
   }
 }
